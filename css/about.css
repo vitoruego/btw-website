@@ -1,0 +1,442 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'Baskerville';
+    src: url('/fonts/Baskerville-01.ttf') format('truetype');
+    font-weight: normal; 
+    font-style: normal; 
+}
+
+@font-face {
+    font-family: 'Baskerville';
+    src: url('/fonts/Baskerville-Italic-03.ttf') format('truetype');
+    font-weight: normal; 
+    font-style: italic; 
+}
+
+:root {
+    --cor0: black;
+    --cor1: white;
+    --cor2: #DD1E30;
+    --fonte-titulo: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    --fonte-body-text: 'Baskerville', serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+    
+}
+
+/* HEADER */
+
+.header-logo {
+    font-family: var(--fonte-titulo);
+}
+
+.header-logo > h1 {
+    color: var(--cor1);
+    font-size: 30px;
+    padding: 2px;
+}
+
+.header-logo > h2 {
+    background-color: var(--cor0);
+    color: var(--cor1);
+    font-size: 30px;
+    padding: 2px;
+}
+
+header {
+   display: flex;
+   flex-flow: row wrap;
+   justify-content: space-between;
+   align-items: center;
+}
+
+nav {
+    font-family: var(--fonte-titulo);
+    font-size: 20px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--cor1);
+    transition: 0.3s;
+    padding: 10px 15px 0px 0px;
+    margin: 0px;
+}
+
+nav a:hover {
+    color: var(--cor0);
+}
+
+/* HEADER END */
+
+
+
+/* BODY */
+
+body {
+    background-color: var(--cor2);
+}
+
+/* BODY END */
+
+
+/* MAIN */
+
+.main-content {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;  
+    width: 100%;
+}
+
+
+.main-content > img {
+    height: auto;
+    width: 100%;
+    max-width: 700px;
+    
+}
+
+#album-cover:hover {
+    content: url('../img/btw-standart.jpg');
+}
+
+article {
+    background-color: var(--cor1);
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-flow: column wrap;  
+    
+    
+}
+
+article > h1 {
+    font-family: var(--fonte-titulo);
+    font-size: 3em;
+    color: var(--cor2);
+    text-align: center;
+    padding: 35px;
+    width: 100%;
+    
+}
+
+article > p {
+    font-family: var(--fonte-body-text);
+    padding: 35px;
+    hyphens: auto;
+    word-wrap: break-word;
+    width: 100%;
+    text-align: justify;
+}
+
+aside {
+    font-family: var(--fonte-body-text);
+    font-style: italic;
+    font-size: 13px;
+    hyphens: auto;
+    word-wrap: break-word;
+    columns: 2;
+    padding: 35px;
+    width: 100%;
+}
+
+ /* MAIN END */
+
+ .gradient-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.8) 100%);
+    pointer-events: none; 
+    z-index: 1;
+  }
+
+/* SECTIONS */
+
+/* REVIEWS SECTION */
+
+#reviews-page {
+    background-image: url(../img/reviews-bg.png);
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    box-sizing: border-box;
+    background-attachment: fixed;
+}
+
+.reviews-content {
+    height: 100vh;
+}
+
+.review {
+    font-family: var(--fonte-body-text);
+    font-size: 1.1em;
+    font-style: italic;
+    color: var(--cor1);
+}
+
+/* END OF REVIEWS SECTION*/
+
+/* RECORDS SECTION */
+
+#tracklist {
+    height: 600px;
+}
+
+#tracklist > h1 {
+    font-family: var(--fonte-titulo);
+    font-size: 4em;
+    text-align: center;
+    color: var(--cor1);
+}
+
+.record-item {
+    font-family: var(--fonte-titulo);
+    background-color: var(--cor1);
+    color: var(--cor2);
+    text-align: center;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    transition: 0.3s;
+    font-size: 0.9em;
+    width: 250px;
+    height: 250px; 
+    flex-shrink: 0; 
+}
+
+
+.record-item h2 {
+    font-size: 2em; 
+}
+
+
+.record-item:hover {
+    background-size: cover;
+    transform: scale(1.2);
+    background-position: center;
+}
+
+.cont-1:hover {
+    background-image: url(../img/tracklist/01-mtn.jpg);
+}
+
+.cont-2:hover {
+    background-image: url(../img/tracklist/02-btw.jpg);
+}
+
+.cont-3:hover {
+    background-image: url(../img/tracklist/03-gh.jpg);
+}
+.cont-4:hover {
+    background-image: url(../img/tracklist/04-j.jpg);
+}
+.cont-5:hover {
+    background-image: url(../img/tracklist/05-a.jpg);
+}
+.cont-6:hover {
+    background-image: url(../img/tracklist/06-h.jpg);
+}
+.cont-7:hover {
+    background-image: url(../img/tracklist/07-s.jpg);
+}
+.cont-8:hover {
+    background-image: url(../img/tracklist/08-bm.jpg);
+}
+.cont-9:hover {
+    background-image: url(../img/tracklist/09-bjaf.jpg);
+}
+.cont-10:hover {
+    background-image: url(../img/tracklist/10-bk.jpg);
+}
+.cont-11:hover {
+    background-image: url(../img/tracklist/11-fohl.jpg);
+}
+.cont-12:hover {
+    background-image: url(../img/tracklist/12-hur2l.jpg);
+}
+.cont-13:hover {
+    background-image: url(../img/tracklist/13-hml.jpg);
+}
+.cont-14:hover {
+    background-image: url(../img/tracklist/14-ec.jpg);
+}
+.cont-15:hover {
+    background-image: url(../img/tracklist/15-tq.jpg);
+}
+.cont-16:hover {
+    background-image: url(../img/tracklist/16-y&i.jpg);
+}
+.cont-17:hover {
+    background-image: url(../img/tracklist/17-teog.jpg);
+}
+
+#roll {
+    display: flex;
+    flex-flow: row nowrap;
+    overflow-x: auto;
+    scroll-behavior: smooth; /* Adiciona uma rolagem suave */
+    -webkit-overflow-scrolling: touch;
+    justify-content: space-evenly;
+    padding: 15px;
+    cursor: grab;
+    cursor: -webkit-grab;
+}
+
+#roll.active {
+    cursor: grabbing;
+    cursor: -webkit-grabbing;
+}
+
+#roll::-webkit-scrollbar {
+    display: none; /* Esconde a barra de rolagem */
+}
+
+/* END OF RECORDS SECTION */
+
+/* TENTH ANNIVERSARY SECTION */
+
+.tenth-banner {
+    width: 100vh;
+    height: auto;
+}
+
+#tenth-anniversary {
+    background-color: var(--cor0);
+}
+
+.btw-reimagined {
+    background-color: #7f7047;
+}
+
+.btw-reimagined > h1 {
+    color: var(--cor0);
+}
+
+.btw-reimagined > p {
+    font-family: var(--fonte-titulo);
+}
+
+#tenth-playlist {
+    background-image: url(../img/kraft-texture.webp);
+    background-size: cover;
+    padding: 20px;
+}
+
+#tenth-playlist > .main-content {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    
+}
+
+#tenth-playlist > .main-content > {
+    font-family: sans-serif;
+}
+
+.tenth-p {
+    font-family: Helvetica;
+}
+
+.links > a {
+    font-family: var(--fonte-titulo);
+    color: var(--cor0);
+}
+
+.links > a:hover {
+    color: #7f7047;
+}
+
+/* END TENTH ANNIVERSARY SECTION */
+
+/* FOOTER */
+
+.footer-container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    background: #000;
+    color: #fff;
+}
+
+.footer {
+    background-color: var(--cor0);
+}
+
+.logo-footer {
+    display: inline-block;
+}
+
+.logo-footer h1, 
+.logo-footer h2 {
+    margin: 0;
+    text-align: left;
+    font-family: var(--fonte-titulo);
+    font-size: 25px;
+}
+.logo-footer h1 {
+    color: var(--cor1);
+}
+
+.logo-footer h2 { 
+    background: #fff;
+    color: var(--cor0);
+}
+
+.footer-text, .footer-text a {
+    font-family: var(--fonte-titulo);
+    color: var(--cor1);
+}
+
+.footer-text > a:hover {
+    color: var(--cor2);
+}
+
+/* FOOTER END */
+
+/* MEDIA QUERIES */
+
+@media (min-width: 1024px) {
+    .main-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr; 
+        gap: 50px; 
+        
+    }
+
+    .main-content > img {
+        width: 100%;
+        height: auto;
+    }
+
+    article {
+        width: 100%;
+        height: auto;
+        
+    }
+
+}
+
+@media (max-width: 400px) {
+    #reviews-page {
+    background-image: url(../img/reviews-bg.png);
+    background-size: cover;
+    background-position: center;
+    
+}
+}

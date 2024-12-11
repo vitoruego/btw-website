@@ -1,0 +1,262 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'Baskerville';
+    src: url('/fonts/Baskerville-01.ttf') format('truetype');
+    font-weight: normal; 
+    font-style: normal; 
+}
+
+@font-face {
+    font-family: 'Baskerville';
+    src: url('/fonts/Baskerville-Italic-03.ttf') format('truetype');
+    font-weight: normal; 
+    font-style: italic; 
+}
+
+:root {
+    --cor0: black;
+    --cor1: white;
+    --cor2: #DD1E30;
+    --fonte-titulo: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    --fonte-body-text: 'Baskerville', serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+/* HEADER */
+
+.header-logo {
+    font-family: var(--fonte-titulo);
+}
+
+.header-logo > h1 {
+    color: var(--cor1);
+    font-size: 30px;
+    padding: 2px;
+}
+
+.header-logo > h2 {
+    background-color: var(--cor0);
+    color: var(--cor1);
+    font-size: 30px;
+    padding: 2px;
+}
+
+header {
+   display: flex;
+   flex-flow: row wrap;
+   justify-content: space-between;
+   align-items: center;
+}
+
+nav {
+    font-family: var(--fonte-titulo);
+    font-size: 20px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--cor1);
+    transition: 0.3s;
+    padding: 10px 15px 0px 0px;
+    margin: 0px;
+}
+
+nav a:hover {
+    color: var(--cor0);
+}
+
+/* HEADER END */
+
+/* BODY */
+
+body {
+    background-color: var(--cor2);
+}
+
+/* BODY END */
+
+/* MAIN */
+
+.main-content {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;  
+    width: 100%;
+}
+
+article {
+    background-color: var(--cor1);
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-flow: column wrap;  
+    
+}
+
+article > h1 {
+    font-family: var(--fonte-titulo);
+    font-size: 3em;
+    color: var(--cor2);
+    text-align: center;
+    padding: 35px;
+    width: 100%;
+    
+}
+
+article > p {
+    font-family: var(--fonte-body-text);
+    padding: 35px;
+    hyphens: auto;
+    word-wrap: break-word;
+    width: 100%;
+    text-align: justify;
+}
+
+aside {
+    font-family: var(--fonte-body-text);
+    font-style: italic;
+    font-size: 13px;
+    hyphens: auto;
+    word-wrap: break-word;
+    columns: 2;
+    padding: 35px;
+    width: 100%;
+}
+
+ /* MAIN END */
+
+/* VIDEOS */
+
+#videos > p > a {
+    color: var(--cor2);
+}
+
+.video-description {
+    background-color: var(--cor1);
+    
+}
+
+div.video-description > h2 {
+    font-family: var(--fonte-titulo);
+    color: var(--cor2);
+    padding: 10px;
+    text-align: center;
+    font-size: 2.5em;
+    
+}
+
+div.video-description > p {
+    font-family: var(--fonte-body-text);
+    padding: 25px;
+    hyphens: auto;
+    word-wrap: break-word;
+}
+
+/* Estilo da thumbnail */
+.video-thumbnail {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    overflow: hidden;
+}
+
+.video-thumbnail img {
+    width: 100%;
+    display: block;
+    transition: transform 0.3s ease, filter 0.3s ease; /* Transição também para o filtro */
+    filter: grayscale(100%); /* Filtro preto e branco por padrão */
+}
+
+/* Efeito de hover */
+.video-thumbnail:hover img {
+    transform: scale(1.05);
+    filter: grayscale(0%) brightness(50%); /* Remove o filtro preto e branco e aplica o brilho */
+}
+
+/* Overlay com o texto */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    color: var(--cor2);
+    font-size: 1.5rem;
+    font-family: var(--fonte-titulo);
+    font-weight: bold;
+    transition: opacity 0.3s ease;
+}
+
+span > a {
+    color: brown;
+}
+span > a:hover {
+    color: var(--cor2);
+}
+
+.video-thumbnail:hover .overlay {
+    opacity: 1;
+}
+
+
+
+/* FOOTER */
+
+.footer-container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    background: #000;
+    color: #fff;
+}
+
+.footer {
+    background-color: var(--cor0);
+}
+
+.logo-footer {
+    display: inline-block;
+}
+
+.logo-footer h1, 
+.logo-footer h2 {
+    margin: 0;
+    text-align: left;
+    font-family: var(--fonte-titulo);
+    font-size: 25px;
+}
+.logo-footer h1 {
+    color: var(--cor1);
+}
+
+.logo-footer h2 { 
+    background: #fff;
+    color: var(--cor0);
+}
+
+.footer-text, .footer-text a {
+    font-family: var(--fonte-titulo);
+    color: var(--cor1);
+}
+
+.footer-text > a:hover {
+    color: var(--cor2);
+}
+
+/* FOOTER END */

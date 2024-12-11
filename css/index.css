@@ -1,0 +1,112 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'Baskerville';
+    src: url('/fonts/Baskerville-01.ttf') format('truetype');
+    font-weight: normal; 
+    font-style: normal; 
+}
+
+@font-face {
+    font-family: 'Baskerville';
+    src: url('/fonts/Baskerville-Italic-03.ttf') format('truetype');
+    font-weight: normal; 
+    font-style: italic; 
+}
+
+
+:root {
+
+    --cor0: black;
+    --cor1: white;
+    --cor2: #DD1E30;
+
+    --fonte-titulo: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    --fonte-body-text: 'Baskerville', serif;
+
+}
+
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+/* HEADER */
+
+.header-logo {
+    font-family: var(--fonte-titulo);
+}
+
+.header-logo > h1 {
+    color: var(--cor1);
+    font-size: 30px;
+    padding: 2px;
+}
+
+.header-logo > h2 {
+    background-color: var(--cor0);
+    color: var(--cor1);
+    font-size: 30px;
+    padding: 2px;
+}
+
+header {
+   display: flex;
+   flex-flow: row wrap;
+   justify-content: space-between;
+   align-items: center;
+}
+
+nav {
+    font-family: var(--fonte-titulo);
+    font-size: 20px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--cor1);
+    transition: 0.3s;
+    padding: 10px 15px 0px 0px;
+    margin: 0px;
+}
+
+nav a:hover {
+    color: var(--cor2);
+}
+
+/* HEADER END */
+
+.hero-section {
+    position: relative;
+    background-image: url('../img/btw-background.gif'); 
+    background-size: cover;
+    background-position: center;
+    height: 100vh; 
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, black, transparent);
+    opacity: 0.5; 
+    z-index: 1;
+}
+
+.hero-section > * {
+    position: relative;
+    z-index: 2;
+}
+
+
+body {
+    overflow: hidden;
+
+}
