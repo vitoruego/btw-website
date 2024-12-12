@@ -28,6 +28,7 @@
     box-sizing: border-box;
     
     
+    
 }
 
 /* HEADER */
@@ -128,6 +129,7 @@ article > h1 {
     text-align: center;
     padding: 35px;
     width: 100%;
+    font-weight: lighter;
     
 }
 
@@ -193,7 +195,7 @@ aside {
 /* RECORDS SECTION */
 
 #tracklist {
-    height: 600px;
+    height: 725px;
 }
 
 #tracklist > h1 {
